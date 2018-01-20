@@ -1,1 +1,1 @@
-##PaperFrame - server management scirpt
+## PaperFrame - server management scirpt
