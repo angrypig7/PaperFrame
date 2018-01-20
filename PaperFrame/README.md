@@ -1,3 +1,3 @@
 ### PaperFrame - server management scirpt
 
-Work is in progress - no funcions yet
+work is in progress - no functions yet
