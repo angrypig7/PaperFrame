@@ -1,2 +1,3 @@
-## Just some personal projects
-That's it, nothing fancy
+### PaperFrame - server management scirpt
+
+work is in progress - no functions yet
