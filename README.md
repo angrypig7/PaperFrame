@@ -5,14 +5,17 @@
 #
 
 # Main Server
-	- SocketPing.php 파일 돌아가게 만들기 -> alive여부 확인 및 DB기록
-	- SocketPing 결과에 따라 Main.php의 이더넷 아이콘 수정하기
+	- SocketPing.php 파일은 관리자가 접속시에만 확인 및 DB기록 -> server.php파일에 ip 및 port 지정하는 페이지 제작, Main.php 이더넷 아이콘 수정
+	- 개별 서버 보고를 주기적인 DB기록 용도로 사용 -> cron에서 주기 줄이기
 	- paperframe 접속 기록 모두 DB에 기록
+	- Odroid를 제외한 나머지 서버는 웹에서 변경이 가능하도록 설정
+	- setcronjob.com 같은 서비스를 사용할 수도
 
 ### DB구성
-	- 0: 메인서버, 1: Odroid, 2: RasPi, 3:ETC
-	- pf_servers
-		○ idx, datetime, serverno, public_ip, ifconfig, temperature, load_status
+> 0: 메인서버, 1: Odroid, 2: RasPi, 3:ETC
+
+	- pf_servers (개별서버의 보고기록 및 메인서버의 socket 결과 저장)
+		○ idx, datetime, serverno, alive, public_ip, local_ip, temperature, load_status, 
 	- pf_accesslog (모든 서버의 접속 기록)
 		○ idx, datetime, serverno, public_ip, file
 	- pf_serverstatus (메인 서버에서 확인하는 alive 여부)
@@ -21,7 +24,7 @@
 ### 메인 서버
 	- 개별 서버의 alive 여부 판단(fsockopen, 시스템 쉘)
 	- 소켓의 errno, errstr및 22, 80등의 well-known 포트 상태 모두 기록
-	- 모든 정보는 DB에 테이블로 구분하여 저장+서버 번호로 구분
+	- 모든 정보는 DB에 저장 -> 서버 번호로 구분
 
 ### 개별 서버
 	- startup script로 스크립트 실행
@@ -48,10 +51,9 @@
 
 ### idea
 	- OMV기준으로 CPU 작동속도 지정(1400/1400 이상)
-	- OMV보안설정
-	- 시작 스크립트/보고 스크립트 작성
-	- 20V -> 5V감압모듈로 파워
-	- VPN, FTP, Web + web monitoring service (CPU usage, network, temperature)
+	- 20V -> 5V감압모듈 + UPS회로로 전원부 구성
+	- PPTP VPN서버 구성
+	- 온도 및 로드율 정수형으로 보고하는 스크리트 제작
 	
 ### Keyword
 	- /pi/home/startup/uploadip.py

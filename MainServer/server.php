@@ -27,9 +27,7 @@ function get_client_ip() {
 }
 $publicip = get_client_ip();
 $curtime = (new DateTime())->format("Y-m-d H:i:s");
-$localip = "0";//inital value
-$temperature = "0";//inital value
-$serverno = -100;//inital value
+
 
 if(isset($_GET['serverno'])){
     $serverno = $_GET['serverno'];
@@ -37,14 +35,22 @@ if(isset($_GET['serverno'])){
         $serverno = 0;
     }
 }
+
 if(isset($_POST['localip'])){
     $localip = $_POST['localip'];
 }
+else{
+    $localip = "0.0.0.0";
+}
+
 if(isset($_POST['temperature'])){
     $temperature = $_POST['temperature'];
 }
+else{
+    $temperature = 0;
+}
 
-// if($localip!=0){
+// if($localip!="0.0.0.0"){
 //     $SQL = "INSERT INTO pf_servers VALUES('', '$curtime',  '$serverno', '$localip', '$publicip', '$temperature')";
 //     mysqli_query($conn, $SQL);
 // }

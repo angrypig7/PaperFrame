@@ -10,6 +10,7 @@ function checkalive($ip, $port){
     }
 }
 
+
 function checkalive_not_working($ip, $port){
     $fp = @fsockopen($ip, $port, $errno, $errstr);
     if (!$fp) {
