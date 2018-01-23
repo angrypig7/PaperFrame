@@ -1,10 +1,11 @@
 <?php
 include("./head.php");
+include_once('dist/Medoo.php');
+include_once('SocketPing.php');
 
 ini_set("display_errors", 1);
 ini_set("display_startup_errors", 1);
 error_reporting(E_ALL);
-include_once('dist/Medoo.php');
 
 function get_client_ip() {
     $ipaddress = '';
@@ -32,6 +33,9 @@ $serverno = -100;//inital value
 
 if(isset($_GET['serverno'])){
     $serverno = $_GET['serverno'];
+    if($serverno < 0 || $serverno > 3){
+        $serverno = 0;
+    }
 }
 if(isset($_POST['localip'])){
     $localip = $_POST['localip'];
@@ -40,10 +44,30 @@ if(isset($_POST['temperature'])){
     $temperature = $_POST['temperature'];
 }
 
-if($localip!=0){
-    $SQL = "INSERT INTO pf_servers VALUES('', '$curtime',  '$serverno', '$localip', '$publicip', '$temperature')";
-    mysqli_query($conn, $SQL);
+// if($localip!=0){
+//     $SQL = "INSERT INTO pf_servers VALUES('', '$curtime',  '$serverno', '$localip', '$publicip', '$temperature')";
+//     mysqli_query($conn, $SQL);
+// }
+
+switch($serverno){
+    case 0:
+        $serverip = "127.0.0.1";
+        $serverport = 80;
+        break;
+    case 1:
+        $serverip = "121.184.155.176";
+        $serverport = 22;
+        break;
+    case 2:
+        $serverip = "127.0.0.1";
+        $serverport = 22;
+        break;
+    case 3:
+        $serverip = "127.0.0.1";
+        $serverport = 22;
+        break;
 }
+
 ?>
 <!-- content -->
 <div class="wrapper row2">
@@ -51,9 +75,9 @@ if($localip!=0){
         <!-- content body -->
         <div id="homepage">
             <!-- One Quarter -->
-            <h1>UPLOAD</h1>
+            <h1><?php echo"SERVER $serverno"; ?></h1>
             <section id="code">
-                <form class="" action="upload.php" method="post">
+                <form class="" action="#" method="post">
                     <input type="text" name="localip" placeholder="localip"></br>
                     <input type="text" name="temperature" placeholder="temperature"></br>
                     <input type="submit" value="Submit"></br>
@@ -65,7 +89,8 @@ if($localip!=0){
                 echo("publicIP : $publicip</br>");
                 echo("localip : $localip</br>");
                 echo("temperature : $temperature</br>");
-                echo("curtime : $curtime</br>");
+                echo("curtime : $curtime</br></br></br>");
+                checkalive($serverip, $serverport);
                 ?>
             </section>
         </div>

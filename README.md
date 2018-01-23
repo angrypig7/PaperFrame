@@ -5,7 +5,7 @@
 #
 
 # Main Server
-	- SocketPing.php 파일 돌아가게 만들기 - alive여부 확인 및 DB기록
+	- SocketPing.php 파일 돌아가게 만들기 -> alive여부 확인 및 DB기록
 	- SocketPing 결과에 따라 Main.php의 이더넷 아이콘 수정하기
 	- paperframe 접속 기록 모두 DB에 기록
 
