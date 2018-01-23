@@ -1,29 +1,32 @@
 <?php
 include("./head.php");
 $input = "admin";
-$hashtye = "sha512";
-if(isset($_POST['input'])){
-    $input = $_POST['input'];
+$hashtye = "md5";
+if(isset($_GET['input'])){
+    $input = $_GET['input'];
 }
-if(isset($_POST['hashtype'])){
-    $hashtype = strtolower($_POST['hashtype']);
+if(isset($_GET['hashtype'])){
+    $hashtype = strtolower($_GET['hashtype']);
 }
 else{
     $hashtype = "md5";
 }
-// 여기서부터 재시작.
-// HASH종류를 POST로 받은 후 (GET으로 바꾸는게 낫겠다) hash_algos()함수에서
-// 나오는 어레이에 포함되면 패스, 없으면 MD5로 변형
 
-// for($i=1;$i<46;$i++){
-//     foreach (hash_algos() as $hashlist) {
-//         $com = strcmp($hashlist, $hashtype);
-//         if($com==0){
-//             break;
-//         }
-//     }
-//     $hashtype
-// }
+for($i=1;$i<46;$i++){
+    foreach (hash_algos() as $hashlist) {
+        $com = strcmp($hashlist, $hashtype);
+        if($com==0){
+            $hashexists = 1;
+            break;
+        }
+        else{
+            $hashexits = 0;
+        }
+    }
+}
+if(!$hashexits){
+    $hashtype = "md5";
+}
 
 $result = 0;
 
@@ -40,7 +43,7 @@ $hash4 = hash($hashtype, $hash3);
             <!-- One Quarter -->
             <h1><?php echo"$hashtype"; ?> HASH</h1>
             <section id="code">
-                <form class="" action="/hash.php" method="post">
+                <form class="" action="/hash.php" method="GET">
                     <input type="text" name="input" placeholder="string to hash"></br>
                     <input type="text" name="hashtype" value="sha512" required></br>
                     <input type="submit" value="HASH">

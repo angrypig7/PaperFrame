@@ -5,26 +5,25 @@
         <!-- content body -->
         <div id="homepage">
             <!-- One Quarter -->
-
             <h1>Server List</h1>
             <section id="services" class="clear">
                 <article>
                     <figure><img src="assets/images/ethernet_green.png" width="32" height="32" alt=""></figure>
                     <strong>Server1 - Odroid HC1</strong>
                     <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-                    <p class="more"><a href="#">Detailed Info &raquo;</a></p>
+                    <p class="more"><a href="/server.php?serverno=1">Detailed Info &raquo;</a></p>
                 </article>
                 <article>
                     <figure><img src="assets/images/ethernet_orange.png" width="32" height="32" alt=""></figure>
                     <strong>Server2 - RasPi 2B</strong>
                     <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.</p>
-                    <p class="more"><a href="#">Detailed Info &raquo;</a></p>
+                    <p class="more"><a href="/server.php?serverno=2">Detailed Info &raquo;</a></p>
                 </article>
                 <article class="last">
                     <figure><img src="assets/images/ethernet_grey.png" width="32" height="32" alt=""></figure>
                     <strong>Server3 - </strong>
                     <p>For more HTML5 templates visit <a href="http://www.os-templates.com/">free website templates</a>. Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum.</p>
-                    <p class="more"><a href="#">Detailed Info &raquo;</a></p>
+                    <p class="more"><a href="/server.php?serverno=3">Detailed Info &raquo;</a></p>
                 </article>
             </section>
 
@@ -79,10 +78,10 @@
                 <h2 class="title">Links</h2>
                 <nav>
                     <ul>
-                        <li><a href="www.dothome.co.kr">Dothome Hosting</a></li>
                         <li><a href="/">Paperframe</a></li>
+                        <li><a href="www.dothome.co.kr">Dothome Hosting</a></li>
                         <li><a href="/myadmin">paperframe - PHPMyAdmin</a></li>
-                        <li><a href="#">Free XHTML Templates</a></li>
+                        <li><a href="http://www.os-templates.com/free-basic-html5-templates/basic-87">Basic 87 template</a></li>
                         <li class="last"><a href="https://dribbble.com/shots/4081186-Type-widget-for-web">Dribble-theme</a></li>
                     </ul>
                 </nav>
