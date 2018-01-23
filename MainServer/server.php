@@ -50,7 +50,7 @@ else{
     $temperature = 0;
 }
 
-serverinfo($serverno);
+$server = serverinfo($serverno);    //$server[0] == $serverip, $server[1] == $serverport
 
 // if($localip!="0.0.0.0"){
 //     $SQL = "INSERT INTO pf_servers VALUES('', '$curtime',  '$serverno', '$localip', '$publicip', '$temperature')";
@@ -79,7 +79,7 @@ serverinfo($serverno);
                 echo("localip : $localip</br>");
                 echo("temperature : $temperature</br>");
                 echo("curtime : $curtime</br></br></br>");
-                checkalive_echo($serverip, $serverport);
+                checkalive_echo($server[0], $server[1]);
                 ?>
             </section>
         </div>
