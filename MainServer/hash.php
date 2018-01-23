@@ -1,5 +1,5 @@
 <?php
-include("./head.php");
+include_once("./head.php");
 $input = "admin";
 $hashtye = "md5";
 if(isset($_GET['input'])){

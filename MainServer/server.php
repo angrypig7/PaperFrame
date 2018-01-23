@@ -50,29 +50,12 @@ else{
     $temperature = 0;
 }
 
+serverinfo($serverno);
+
 // if($localip!="0.0.0.0"){
 //     $SQL = "INSERT INTO pf_servers VALUES('', '$curtime',  '$serverno', '$localip', '$publicip', '$temperature')";
 //     mysqli_query($conn, $SQL);
 // }
-
-switch($serverno){
-    case 0:
-        $serverip = "127.0.0.1";
-        $serverport = 80;
-        break;
-    case 1:
-        $serverip = "121.184.155.176";
-        $serverport = 22;
-        break;
-    case 2:
-        $serverip = "127.0.0.1";
-        $serverport = 22;
-        break;
-    case 3:
-        $serverip = "127.0.0.1";
-        $serverport = 22;
-        break;
-}
 
 ?>
 <!-- content -->
@@ -96,7 +79,7 @@ switch($serverno){
                 echo("localip : $localip</br>");
                 echo("temperature : $temperature</br>");
                 echo("curtime : $curtime</br></br></br>");
-                checkalive($serverip, $serverport);
+                checkalive_echo($serverip, $serverport);
                 ?>
             </section>
         </div>
