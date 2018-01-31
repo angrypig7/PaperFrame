@@ -1,8 +1,11 @@
-# PaperFrame - server management scirpt
+﻿
+# PaperFrame - server management script (in progress)
 
-#### work is in progress
+### Link 
+	> [config backup] https://forum.openmediavault.org/index.php/Thread/5080-Configuration-Backup/
+	> [PPTP server] http://www.daftdevil.com/8
 
-#
+	
 
 # Main Server
 	- SocketPing.php 파일은 관리자가 접속시에만 확인 및 DB기록 -> server.php파일에 ip 및 port 지정하는 페이지 제작, Main.php 이더넷 아이콘 수정
