@@ -54,6 +54,11 @@
 	- 온도 및 로드율 정수형으로 보고하는 스크리트 제작
 	
 ### Keyword
+	- systemctl enable fail2ban
+	- /pi/home/startup/uploadip.py
+	- /etc/ppp/chap-secrets
+	- vcgencmd measure_temp
+	- Webmin + Authentic theme
 	- Odroid
 		- cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq
 		- awk '{printf "%3.1f\n", $1/1000}' /sys/class/thermal/thermal_zone0/temp
@@ -68,10 +73,9 @@
 		- cat /sys/class/thermal/thermal_zone4/temp
 		- cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu2/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu3/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu5/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu6/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu7/cpufreq/cpuinfo_cur_freq
 		- awk '{printf "%3.1f\n", $1/1000}' /sys/class/thermal/thermal_zone0/temp && awk '{printf "%3.1f\n", $1/1000}' /sys/class/thermal/thermal_zone1/temp && awk '{printf "%3.1f\n", $1/1000}' /sys/class/thermal/thermal_zone2/temp && awk '{printf "%3.1f\n", $1/1000}' /sys/class/thermal/thermal_zone3/temp && awk '{printf "%3.1f\n", $1/1000}' /sys/class/thermal/thermal_zone4/temp
-	- /pi/home/startup/uploadip.py
-	- /etc/ppp/chap-secrets
-	- vcgencmd measure_temp
-	- PHPSysInfo
+		- 
+		- ### PHP ###
+			- awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone0/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone1/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone2/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone3/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone4/temp
 
 ### AppJam installs
 	sudo apt install apache2

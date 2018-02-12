@@ -44,17 +44,17 @@ $hash4 = hash($hashtype, $hash3);
             <h1><?php echo"$hashtype"; ?> HASH</h1>
             <section id="code">
                 <form class="" action="/hash.php" method="GET">
-                    <input type="text" name="input" placeholder="string to hash"></br>
-                    <input type="text" name="hashtype" value="sha512" required></br>
+                    <input type="text" name="input" placeholder="string to hash"><br>
+                    <input type="text" name="hashtype" value="sha512" required><br>
                     <input type="submit" value="HASH">
                 </form>
             </section>
             <section id="code">
                 <?php
                 echo"HASH1: $hash1";
-                echo"</br></br>HASH2: $hash2";
-                echo"</br></br>HASH3: $hash3";
-                echo"</br></br>HASH4: $hash4</br>";
+                echo"<br><br>HASH2: $hash2";
+                echo"<br><br>HASH3: $hash3";
+                echo"<br><br>HASH4: $hash4<br>";
                 ?>
             </section>
         </div>

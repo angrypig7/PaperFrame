@@ -2,15 +2,15 @@ import os
 import requests
 import time
 
-def upload(localip, coretemp):
+def upload(localip, thermal):
         URL = "http://paperframe.dothome.co.kr/server.php?serverno=1"
         data = {
                 "localip": localip,
-                "coretemp": coretemp,
+                "thermal": thermal,
         }
         response = requests.post(URL, data=data, timeout=10, verify=True)
         #       print(localip)
-        #       print(coretemp)
+        #       print(thermal)
         #       print(response)
         return
 
@@ -18,13 +18,13 @@ count = 1
 
 while 1:
         localip = os.popen("ifconfig").read()
-        coretemp = os.popen("vcgencmd measure_temp").read()
-        coretemp = coretemp.replace("temp=", "")
-        coretemp = coretemp.replace("'C", "")
-        upload(localip, coretemp)
+        thermal = os.popen("vcgencmd measure_temp").read()
+        thermal = thermal.replace("temp=", "")
+        thermal = thermal.replace("'C", "")
+        upload(localip, thermal)
 
         iplength = len(localip)
-        ctlength = len(coretemp)
+        ctlength = len(thermal)
         if(iplength>5 and ctlength>1):
                 print()
                 print("SUCCESS")

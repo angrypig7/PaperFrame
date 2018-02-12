@@ -2,14 +2,14 @@ import os
 import requests
 import time
 
-def upload(localip, coretemp):
+def upload(localip, thermal):
     URL = "http://paperframe.dothome.co.kr/raspberryDataInput.php"
     data = {
         "localip": localip,
-        "coretemp": coretemp,
+        "thermal": thermal,
     }
     response = requests.post(URL, data=data, timeout=10, verify=True)
-    #       print(coretemp)
+    #       print(thermal)
     #       print(response)
     return
 
@@ -19,13 +19,13 @@ localip = os.popen("ifconfig").read()
 iplength = len(localip)
 
 while 1:
-    coretemp = os.popen("vcgencmd measure_temp").read()
-    ctlength = len(coretemp)
-    coretemp = coretemp.replace("temp=", "")
-    coretemp = coretemp.replace("'C", "")
+    thermal = os.popen("vcgencmd measure_temp").read()
+    ctlength = len(thermal)
+    thermal = thermal.replace("temp=", "")
+    thermal = thermal.replace("'C", "")
 
     if ctlength>4:
-        upload(localip, coretemp)
+        upload(localip, thermal)
     else:
         upload("ERROR")
 

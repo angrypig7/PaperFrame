@@ -44,15 +44,15 @@ error_reporting(E_ALL);
             </section>
 
             <section id="code">
-                <p>code to view PHP errors:</br></br>
-                    ini_set('display_errors', 1);</br>
-                    ini_set('display_startup_errors', 1);</br>
+                <p>code to view PHP errors:<br><br>
+                    ini_set('display_errors', 1);<br>
+                    ini_set('display_startup_errors', 1);<br>
                     error_reporting(E_ALL);</p>
             </section>
 
             <!-- / One Quarter -->
             <section id="shout">
-            </br></br>
+            <br><br>
             <hr>
                 <p>Below may not be very useful.</p>
             </section>
