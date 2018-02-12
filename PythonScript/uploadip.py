@@ -3,7 +3,7 @@ import requests
 import time
 
 def upload(localip, coretemp):
-        URL = "http://paperframe.dothome.co.kr/raspberryDataInput.php"
+        URL = "http://paperframe.dothome.co.kr/server.php?serverno=1"
         data = {
                 "localip": localip,
                 "coretemp": coretemp,
