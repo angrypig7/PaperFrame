@@ -3,25 +3,28 @@ ini_set("display_errors", 1);
 ini_set("display_startup_errors", 1);
 error_reporting(E_ALL);
 
+
 function serverinfo($serverno){
+    $serverno[3];
+
     switch($serverno){
         case 0:
             $server[0] = "127.0.0.1";
             $server[1] =  80;
             return $server;
             break;
-        case 1:
+        case 1: //Odorid HC1
             $server[0] = "121.184.155.176";
             $server[1] = 22;
             return $server;
             break;
-        case 2:
-            $server[0] = "127.0.0.1";
+        case 2: //RaspPi 2B
+            $server[0] = "";
             $server[1] =  22;
             return $server;
             break;
-        case 3:
-            $server[0] = "127.0.0.1";
+        case 3: //IWINV waterplus
+            $server[0] = "115.68.231.45)";
             $server[1] =  22;
             return $server;
             break;
@@ -33,6 +36,7 @@ function checkalive_echo($ip, $port){
         echo 'online!';
         fclose($socket);
     } else {
+        fclose($socket);
         echo "ERROR - OFFLINE<br>";
         echo "DEBUG: $errno - $errstr<br />\n";
         echo "ERROR<br>";

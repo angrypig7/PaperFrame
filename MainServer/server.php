@@ -1,7 +1,7 @@
 <?php
 include("./head.php");
 include_once('dist/Medoo.php');
-// include_once('SocketPing.php');
+include_once('SocketPing.php');
 
 ini_set("display_errors", 1);
 ini_set("display_startup_errors", 1);
