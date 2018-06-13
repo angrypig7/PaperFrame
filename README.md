@@ -77,15 +77,6 @@
 		- ### PHP ###
 			- awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone0/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone1/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone2/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone3/temp && awk '{printf \"%3.1f\n\", $1/1000}' /sys/class/thermal/thermal_zone4/temp
 
-### AppJam installs
-	sudo apt install apache2
-	sudo apt install php7.0
-	sudo apt install libapache2-mod-php7.0
-	sudo apt install mysql-service
-	
-### Link
-	- [PPTP Server] http://www.daftdevil.com/8
-
 ### Cron Scripts
 	- SAMPLE
 		a. printf "\n===============================================================================\n #finger -l:\n\n";finger -l;
