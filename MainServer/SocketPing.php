@@ -33,9 +33,9 @@ function checkalive_echo($ip, $port){
         echo 'online!';
         fclose($socket);
     } else {
-        echo "ERROR - OFFLINE</br>";
+        echo "ERROR - OFFLINE<br>";
         echo "DEBUG: $errno - $errstr<br />\n";
-        echo "ERROR</br>";
+        echo "ERROR<br>";
     }
 }
 
@@ -53,9 +53,9 @@ function checkalive($ip, $port){
 function checkalive_not_working($ip, $port){
     $fp = @fsockopen($ip, $port, $errno, $errstr);
     if (!$fp) {
-        echo "ERROR</br>";
+        echo "ERROR<br>";
         echo "ERROR: $errno - $errstr<br />\n";
-        echo "ERROR</br>";
+        echo "ERROR<br>";
     }
     else{
         echo "$fp";
