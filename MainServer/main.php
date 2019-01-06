@@ -1,6 +1,5 @@
 <?php
 include_once("./head.php");
-include_once("./SocketPing.php");
 
 ini_set("display_errors", 1);
 ini_set("display_startup_errors", 1);
@@ -60,7 +59,7 @@ error_reporting(E_ALL);
             </section>
 
             <!-- 4pics -->
-            <!-- <section id="latest" class="clear">
+            <section id="latest" class="clear">
                 <article class="one_quarter">
                     <figure><img src="assets/images/demo/215x315.gif" width="215" height="315" alt="">
                         <figcaption>Image Caption Here</figcaption>
@@ -81,12 +80,12 @@ error_reporting(E_ALL);
                         <figcaption>Image Caption Here</figcaption>
                     </figure>
                 </article>
-            </section> -->
+            </section>
 
             <!-- coode snippets -->
-            <!-- <section id="code">
+            <section id="code">
                 <p>I can place code sniffets in here</p>
-            </section> -->
+            </section>
 
         </div>
 
