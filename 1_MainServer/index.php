@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LOGIN-paperframe</title>
+        <title>LOGIN-PaperFrame</title>
         <link rel="stylesheet" href="assets/css/login-style.css" type="text/css">
 
     </head>
@@ -10,16 +10,15 @@
         <div class="body"></div>
 		<div class="grad"></div>
 		<div class="header">
-			<div>Paper<span>frame</span></div>
+			<div>Paper<span>Frame</span></div>
 		</div>
 		<br>
 		<div class="login">
             <form class="" action="login.php" method="post">
-                <input type="text" placeholder="username" name="ID"><br>
+                <input type="text" placeholder="username" name="ID" autofocus><br>
 				<input type="password" placeholder="password" name="PW"><br>
 				<input type="submit" value="Login">
             </form>
-
 		</div>
     </body>
 </html>

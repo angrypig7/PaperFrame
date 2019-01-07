@@ -73,7 +73,8 @@ legend{display:none;}
 /*----------------------------------------------Header-------------------------------------*/
 
 #header{
-    padding: 20px 0;
+    padding: 5px;
+    padding-bottom: 0px;
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -126,7 +127,7 @@ legend{display:none;}
     padding:0;
 }
 #container #homepage{display:block; width:100%; line-height:1.6em;}
-#container #homepage h1{margin-bottom:25px; padding-bottom:10px; border-bottom:1px solid #D6D6D6;}
+#container #homepage h1{margin-top:-25px; margin-bottom:10px; padding-bottom:2px; border-bottom:1px solid #D6D6D6;}
 
 #container #homepage #services article{display:inline; float:left; width:300px; margin:0 30px 0 0; padding:0;}
 #container #homepage #services .last{margin-right:0;}
@@ -139,6 +140,14 @@ legend{display:none;}
 #container section{display:block; width:100%; margin:0 0 30px 0; padding:0;}
 #container .last{margin:0;}
 #container .more{text-align:right;}
+
+/* ------Google Maps API-----*/
+#map{
+    height: 600px;
+    
+    border-style: solid;
+    border-width: 1px;
+}
 
 /* ------Homepage-----*/
 

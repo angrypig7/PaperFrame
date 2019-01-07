@@ -1,8 +1,8 @@
 <?php
 $NOLOGIN = 4660;
 include("./head.php");
+include("./footer.php");
 include_once('dist/Medoo.php');
-include_once('SocketPing.php');
 
 ini_set("display_errors", 1);
 ini_set("display_startup_errors", 1);
@@ -27,48 +27,51 @@ function get_client_ip() {
     return $ipaddress;
 }
 $publicip = get_client_ip();
-$curtime = (new DateTime())->format("Y-m-d H:i:s");
+// $curtime = (new DateTime())->format("Y-m-d H:i:s");
 
 
-if(isset($_POST['serverno'])){
-    $serverno = $_POST['serverno'];
+if(isset($_POST['serverNum'])){
+    $serverNum = $_POST['serverNum'];
 }
-else if(isset($_GET['serverno'])){
-    $serverno = $_GET['serverno'];
+else if(isset($_GET['serverNum'])){
+    $serverNum = $_GET['serverNum'];
 }
-if(!isset($serverno) || ($serverno < 0 || $serverno > 3)){
-    $serverno = 404;
+if(!isset($serverNum)){
+    // $serverNum = 404;
+    $serverNUm = NULL;
+}
+
+if(isset($_POST['serverName'])){
+    $serverName = $_POST['serverName'];
+}
+else if(isset($_GET['serverName'])){
+    $serverName = $_GET['serverName'];
+}
+if(!isset($servserverNameerNum)){
+    $serverName = NULL;
 }
 
 if(isset($_POST['localip'])){
     $localip = $_POST['localip'];
 }
 else{
-    $localip = "0.0.0.0";
+    // $localip = "-.-.-.-";
+    $localip = NULL;
 }
 
 if(isset($_POST['thermal'])){
     $thermal = $_POST['thermal'];
 }
 else{
-    $thermal = 0;
+    $thermal = NULL;
 }
 
-if(isset($_POST['freq'])){
-    $freq = $_POST['freq'];
-}
-else{
-    $freq = 0;
-}
+echo "$serverNum $localip $publicip $thermal";
 
-// $server = serverinfo($serverno);    //$server[0] == $serverip, $server[1] == $serverport
-
-$SQL = "INSERT INTO pf_servers VALUES('', '$curtime',  '$serverno', '$localip', '$publicip', '$thermal', '$freq')";
+$SQL = "INSERT INTO pf_servers (serverNum, serverName, local_ip, public_ip, thermal) VALUES('$serverNum', '$serverName', '$localip', '$publicip', '$thermal')";
 mysqli_query($conn, $SQL);
 
-echo"<scrip>history.back();</script>";
-die;
+// echo"<script>history.back();</script>";
+// die;
 
 ?>
-<!-- Footer -->
-<?php include("./footer.php"); ?>
