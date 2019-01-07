@@ -106,7 +106,7 @@ $ser3status = time("Y-m-d H:i:s")-strtotime($server[2][0]) < 86400 ? 1 : 0;  // 
                     <strong>Server1 - <?php echo"$ser1Name";?> </strong>
                     <p>Last report: <?php echo"$ser1TS";?> <a href="#"><?php echo"$ser1TSElap";?></a></p>
                     <p>PublicIP: <a href="#"><?php echo"$ser1PubIP";?></a></p>
-                    <p>LocalIP: <?php echo"$ser1LocIP";?></p>
+                    <p>LocalIP: <a href="#"><?php echo"$ser1LocIP";?></a></p>
                     <p class="more"><a href="#">Detailed Info &raquo;</a></p>
                 </article>
 
@@ -115,7 +115,7 @@ $ser3status = time("Y-m-d H:i:s")-strtotime($server[2][0]) < 86400 ? 1 : 0;  // 
                     <strong>Server2 - <?php echo"$ser2Name";?> </strong>
                     <p>Last report: <?php echo"$ser2TS";?> <a href="#"><?php echo"$ser2TSElap";?></a></p>
                     <p>PublicIP: <a href="#"><?php echo"$ser2PubIP";?></a></p>
-                    <p>LocalIP: <?php echo"$ser2LocIP";?></p>
+                    <p>LocalIP: <a href="#"><?php echo"$ser2LocIP";?></a></p>
                     <p class="more"><a href="#">Detailed Info &raquo;</a></p>
                 </article>
 
@@ -124,7 +124,7 @@ $ser3status = time("Y-m-d H:i:s")-strtotime($server[2][0]) < 86400 ? 1 : 0;  // 
                     <strong>Server3 - <?php echo"$ser3Name";?> </strong>
                     <p>Last report: <?php echo"$ser3TS";?> <a href="#"><?php echo"$ser3TSElap";?></a></p>
                     <p>PublicIP: <a href="#"><?php echo"$ser3PubIP";?></a></p>
-                    <p>LocalIP: <?php echo"$ser3LocIP";?></p>
+                    <p>LocalIP: <a href="#"><?php echo"$ser3LocIP";?></a></p>
                     <p class="more"><a href="#">Detailed Info &raquo;</a></p>
                 </article>
             </section>

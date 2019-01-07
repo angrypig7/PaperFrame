@@ -47,7 +47,7 @@ if(isset($_POST['serverName'])){
 else if(isset($_GET['serverName'])){
     $serverName = $_GET['serverName'];
 }
-if(!isset($servserverNameerNum)){
+if(!isset($serverName)){
     $serverName = NULL;
 }
 
@@ -55,7 +55,6 @@ if(isset($_POST['localip'])){
     $localip = $_POST['localip'];
 }
 else{
-    // $localip = "-.-.-.-";
     $localip = NULL;
 }
 
