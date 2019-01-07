@@ -41,31 +41,6 @@ if(isset($_GET['menu'])){
 <div class="wrapper row2">
     <div id="container" class="clear">
         <!-- content body -->
-        <?php
-        if($menu == 0){
-            
-        }
-        ?>
-        <div id="map">
-            <!-- Google Maps Div -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf9yz2xyNW7nPYCjxMIzO29348OSZa1wk&callback=initMap"
-            async defer></script>
-            <script>
-                var map;
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 37.341894, lng: 126.831500},
-                    zoom: 17
-                    });
-
-                    var marker = new google.maps.Marker({
-                    position: {lat: 37.3419, lng: 126.83152},
-                    map: map,
-                    title: 'KDMHS'
-                    });
-                }
-            </script>
-        </div>
         <div id="homepage">
             <!-- One Quarter -->
             <h1>Server List</h1>

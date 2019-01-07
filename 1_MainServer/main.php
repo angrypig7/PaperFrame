@@ -72,18 +72,23 @@ $ser1Name = $server[0][2];
 $ser1LocIP = substr($server[0][3], 0, 80);
 $ser1PubIP = $server[0][4];
 $ser1TSElap = elapsed_time(strtotime($server[0][0]));
+$ser1status = time("Y-m-d H:i:s")-strtotime($server[0][0]) < 86400 ? 1 : 0;  // 1 if last report has been around less than a day
 
 $ser2TS = $server[1][0];
 $ser2Name = $server[1][2];
 $ser2LocIP = $server[1][3];
 $ser2PubIP = $server[1][4];
 $ser2TSElap = elapsed_time(strtotime($server[1][0]));
+$ser2status = time("Y-m-d H:i:s")-strtotime($server[1][0]) < 86400 ? 1 : 0;  // 1 if last report has been around less than a day
 
 $ser3TS = $server[2][0];
 $ser3Name = $server[2][2];
 $ser3LocIP = $server[2][3];
 $ser3PubIP = $server[2][4];
 $ser3TSElap = elapsed_time(strtotime($server[2][0]));
+$ser3status = time("Y-m-d H:i:s")-strtotime($server[2][0]) < 86400 ? 1 : 0;  // 1 if last report has been around less than a day
+
+
 
 ?>
 
@@ -97,7 +102,7 @@ $ser3TSElap = elapsed_time(strtotime($server[2][0]));
             <h1>Server List</h1>
             <section id="services" class="clear">
                 <article>
-                    <figure><img src="assets/images/ethernet_green.png" width="32" height="32" alt=""></figure>
+                    <figure><img src="assets/images/ethernet_<?php  if($ser1status) echo"green"; else echo"orange"; ?>.png" width="32" height="32" alt=""></figure>
                     <strong>Server1 - <?php echo"$ser1Name";?> </strong>
                     <p>Last report: <?php echo"$ser1TS";?> <a href="#"><?php echo"$ser1TSElap";?></a></p>
                     <p>PublicIP: <a href="#"><?php echo"$ser1PubIP";?></a></p>
@@ -106,25 +111,38 @@ $ser3TSElap = elapsed_time(strtotime($server[2][0]));
                 </article>
 
                 <article>
-                    <figure><img src="assets/images/ethernet_orange.png" width="32" height="32" alt=""></figure>
+                    <figure><img src="assets/images/ethernet_<?php  if($ser2status) echo"green"; else echo"orange"; ?>.png" width="32" height="32" alt=""></figure>
                     <strong>Server2 - <?php echo"$ser2Name";?> </strong>
-                    <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.</p>
+                    <p>Last report: <?php echo"$ser2TS";?> <a href="#"><?php echo"$ser2TSElap";?></a></p>
+                    <p>PublicIP: <a href="#"><?php echo"$ser2PubIP";?></a></p>
+                    <p>LocalIP: <?php echo"$ser2LocIP";?></p>
                     <p class="more"><a href="#">Detailed Info &raquo;</a></p>
                 </article>
 
                 <article class="last">
-                    <figure><img src="assets/images/ethernet_orange.png" width="32" height="32" alt=""></figure>
+                    <figure><img src="assets/images/ethernet_<?php  if($ser3status) echo"green"; else echo"orange"; ?>.png" width="32" height="32" alt=""></figure>
                     <strong>Server3 - <?php echo"$ser3Name";?> </strong>
-                    <p>For more HTML5 templates visit <a href="http://www.os-templates.com/">free website templates</a>. Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum.</p>
+                    <p>Last report: <?php echo"$ser3TS";?> <a href="#"><?php echo"$ser3TSElap";?></a></p>
+                    <p>PublicIP: <a href="#"><?php echo"$ser3PubIP";?></a></p>
+                    <p>LocalIP: <?php echo"$ser3LocIP";?></p>
                     <p class="more"><a href="#">Detailed Info &raquo;</a></p>
                 </article>
             </section>
 
             <section id="code">
-                <p>code to view PHP errors:<br><br>
+                <p>
+                    URL: http://paperframe.dothome.co.kr/upload.php <br>
+                    Fields: serverNum, serverName, localip, thermal
+                </p>
+            </section>
+
+
+            <section id="code">
+                <p>
                     ini_set('display_errors', 1);<br>
                     ini_set('display_startup_errors', 1);<br>
-                    error_reporting(E_ALL);</p>
+                    error_reporting(E_ALL);
+                </p>
             </section>
 
         </div>
