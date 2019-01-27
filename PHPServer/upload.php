@@ -58,16 +58,16 @@ else{
     $localip = NULL;
 }
 
-if(isset($_POST['thermal'])){
-    $thermal = $_POST['thermal'];
+if(isset($_POST['test'])){
+    $test = $_POST['test'];
 }
 else{
-    $thermal = NULL;
+    $test = NULL;
 }
 
 echo "$serverNum $localip $publicip $thermal";
 
-$SQL = "INSERT INTO pf_servers (serverNum, serverName, local_ip, public_ip, thermal) VALUES('$serverNum', '$serverName', '$localip', '$publicip', '$thermal')";
+$SQL = "INSERT INTO pf_servers (serverNum, serverName, local_ip, public_ip, test) VALUES('$serverNum', '$serverName', '$localip', '$publicip', '$test')";
 mysqli_query($conn, $SQL);
 
 // echo"<script>history.back();</script>";

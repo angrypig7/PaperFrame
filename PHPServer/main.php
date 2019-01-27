@@ -63,7 +63,7 @@ for($i=1; $i<4; $i++){
         $server[$i-1][2] = $row['serverName'];
         $server[$i-1][3] = $row['local_ip'];
         $server[$i-1][4] = $row['public_ip'];
-        $server[$i-1][5] = $row['thermal'];
+        $server[$i-1][5] = $row['test'];
     }
 }
 
@@ -132,17 +132,17 @@ $ser3status = time("Y-m-d H:i:s")-strtotime($server[2][0]) < 86400 ? 1 : 0;  // 
             <section id="code">
                 <p>
                     URL: http://paperframe.dothome.co.kr/upload.php <br>
-                    Fields: serverNum, serverName, localip, thermal
+                    Fields: serverNum, serverName, localip, test
                 </p>
             </section>
 
 
             <section id="code">
-                <p>
+                <!-- <p>
                     ini_set('display_errors', 1);<br>
                     ini_set('display_startup_errors', 1);<br>
                     error_reporting(E_ALL);
-                </p>
+                </p> -->
             </section>
 
         </div>
