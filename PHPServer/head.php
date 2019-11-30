@@ -4,7 +4,7 @@
     <title>PaperFrame</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/main-layout.css" type="text/css">
-    <?php if(!isset($NOLOGIN))    {  include "login.php";  } ?>
+    <?php if (!isset($NOLOGIN)) {include "login.php";}?>
 </head>
 <body>
     <div class="wrapper row1">
