@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 date_default_timezone_set('Asia/Seoul');
 
 include_once("./head.php");
-include_once('dist/Medoo.php');
+include_once('./database.php');
 
 function get_client_ip() {
     $ipaddress = '';

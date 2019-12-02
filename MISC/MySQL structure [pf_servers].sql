@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 07, 2019 at 09:43 PM
+-- Generation Time: Dec 02, 2019 at 04:17 PM
 -- Server version: 5.5.59-log
--- PHP Version: 5.6.38
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,7 +35,7 @@ CREATE TABLE `pf_servers` (
   `serverName` varchar(100) NOT NULL,
   `local_ip` text,
   `public_ip` varchar(45) DEFAULT NULL,
-  `thermal` varchar(180) DEFAULT NULL
+  `test` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

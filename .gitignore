@@ -1,7 +1,7 @@
 .git/
 Thumbs.db
 .idea/
+PHPServer/.idea/
 .vscode
 workspace.xml
 __pycache__/
-

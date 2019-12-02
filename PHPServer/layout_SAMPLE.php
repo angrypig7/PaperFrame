@@ -4,7 +4,7 @@ ini_set("display_startup_errors", 1);
 error_reporting(E_ALL);
 
 include_once("./head.php");
-include_once('dist/Medoo.php');
+include_once('./database.php');
 
 function get_client_ip() {
     $ipaddress = '';
