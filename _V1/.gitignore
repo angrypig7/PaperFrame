@@ -1,0 +1,7 @@
+.git/
+Thumbs.db
+.idea/
+.vscode
+workspace.xml
+__pycache__/
+
