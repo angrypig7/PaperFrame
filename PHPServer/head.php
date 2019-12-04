@@ -16,7 +16,7 @@
             <nav>
                 <ul>
                     <li><a href="/main.php">Main</a></li>
-                    <li><a href="/main.php">Linux_Script</a></li>
+                    <li><a href="./paperframe_report.sh">Linux_Script</a></li>
                     <li><a href="/layout_SAMPLE.php">sample</a></li>
                     <li class="last"><a href="/">LOGOUT</a></li>
                 </ul>

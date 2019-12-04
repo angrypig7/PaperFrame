@@ -61,7 +61,7 @@ else{
     $test = NULL;
 }
 
-echo "$serverNum $localip $publicip $thermal";
+echo "serverNum: $serverNum - PublicIP: $publicip - LocalIP: $localip";
 
 $SQL = "INSERT INTO pf_servers (serverNum, serverName, local_ip, public_ip, test) VALUES('$serverNum', '$serverName', '$localip', '$publicip', '$test')";
 mysqli_query($conn, $SQL);
