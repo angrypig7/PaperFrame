@@ -1,5 +1,4 @@
 <?php
-$NOLOGIN = 4660;
 // include("./head.php");
 // include("./footer.php");
 include_once('./database.php');
@@ -35,22 +34,16 @@ if(isset($_GET['serverNum'])){
 }else{
     die("no \$_GET[serverNum]");
 }
-if(!isset($serverNum)){
-    // $serverNum = 404;
-    $serverNUm = NULL;
-}
 
 if(isset($_GET['serverName'])){
     $serverName = $_GET['serverName'];
-}
-if(!isset($serverName)){
-    $serverName = NULL;
+}else{
+    die("no \$_GET[serverName]");
 }
 
 if(isset($_GET['localip'])){
     $localip = $_GET['localip'];
-}
-else{
+}else{
     $localip = NULL;
 }
 
@@ -61,7 +54,7 @@ else{
     $test = NULL;
 }
 
-echo "serverNum: $serverNum - PublicIP: $publicip - LocalIP: $localip";
+echo "serverNum: $serverNum - PublicIP: $publicip - LocalIP: $localip - test: $test";
 
 $SQL = "INSERT INTO pf_servers (serverNum, serverName, local_ip, public_ip, test) VALUES('$serverNum', '$serverName', '$localip', '$publicip', '$test')";
 mysqli_query($conn, $SQL);
