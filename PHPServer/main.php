@@ -131,8 +131,8 @@ $ser3status = time("Y-m-d H:i:s")-strtotime($server[2][0]) < 86400 ? 1 : 0;  // 
 
             <section id="code">
                 <p>
-                    URL: http://paperframe.dothome.co.kr/upload.php <br>
-                    Fields: serverNum, serverName, localip, test
+                    <!-- URL: http://paperframe.dothome.co.kr/upload.php <br>
+                    Fields: serverNum, serverName, localip, test -->
                 </p>
             </section>
 

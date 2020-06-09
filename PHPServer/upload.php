@@ -31,12 +31,16 @@ $publicip = get_client_ip();
 
 if(isset($_GET['serverNum'])){
     $serverNum = $_GET['serverNum'];
+}if(isset($_POST['serverNum'])){
+    $serverNum = $_POST['serverNum'];
 }else{
     die("no \$_GET[serverNum]");
 }
 
 if(isset($_GET['serverName'])){
     $serverName = $_GET['serverName'];
+}if(isset($_POST['serverName'])){
+    $serverName = $_POST['serverName'];
 }else{
     die("no \$_GET[serverName]");
 }
